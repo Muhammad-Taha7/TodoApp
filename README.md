@@ -1,12 +1,75 @@
-# React + Vite
+✅ Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and professional Todo Application built with React.js and Tailwind CSS.
+This app helps you stay productive by allowing you to add, prioritize, and manage your daily tasks in an easy and visually appealing way.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✍️ Add New Tasks – Quickly add tasks with a clean form.
 
-## Expanding the ESLint configuration
+🏷️ Priority Levels – Assign High, Medium, or Low priority to tasks.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Mark as Done / Pending – Toggle between completed and pending tasks.
+
+🗑️ Delete Tasks – Remove tasks with a single click.
+
+📊 Task Summary – See how many tasks are completed and how many are still pending.
+
+📱 Responsive Design – Fully responsive UI for desktop and mobile.
+
+🎨 Modern UI – Styled with Tailwind CSS for a smooth and elegant experience.
+
+🛠️ Tech Stack
+
+React.js – For building UI and handling state with hooks
+
+Tailwind CSS – For responsive and modern styling
+
+JavaScript (ES6+) – Core programming logic
+
+📂 Project Structure
+src/
+ ├── components/
+ │    └── TodoApp.jsx
+ ├── App.jsx
+ ├── index.js
+ └── styles.css
+
+⚙️ Installation & Setup
+
+Clone the repository
+
+git clone https://github.com/your-username/todo-app.git
+cd todo-app
+
+
+Install dependencies
+
+npm install
+
+
+Run the development server
+
+npm start
+
+
+Open your browser at http://localhost:3000 🎉
+
+📸 Screenshots
+
+<img width="589" height="721" alt="image" src="https://github.com/user-attachments/assets/3fba6dfa-e47f-476d-a62c-d52b924f2725" />
+
+
+🎯 Future Improvements
+
+⏰ Add task due dates with reminders
+
+📌 Drag-and-drop to reorder tasks
+
+☁️ Save tasks in local storage or a database
+
+👤 Add user authentication for personal task management
+
+👨‍💻 Author
+
+Developed with ❤️ by Taha
