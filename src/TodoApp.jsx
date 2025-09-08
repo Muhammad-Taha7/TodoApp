@@ -1,51 +1,30 @@
 import { useState } from "react";
 
-// Main Component
 export const TodoApp = () => {
-  // Input ke liye state (user jo likhega input box me)
   const [inputValue, setInputValue] = useState("");
-
-  // Priority (default Medium)
   const [priority, setPriority] = useState("Medium");
-
-  // Task list ko store karne ke liye array of objects
   const [tasks, setTasks] = useState([]);
 
-  // -----------------------------
-  // ADD TASK FUNCTION
-  // -----------------------------
   const handleFormSubmit = (e) => {
-    e.preventDefault(); // form reload na ho isliye
-    if (!inputValue.trim()) return; // agar input empty ho to kuch na kare
+    e.preventDefault();
+    if (!inputValue.trim()) return;
 
-    // ek new task object create kiya
     const newTask = {
-      text: inputValue, // task ka text
-      done: false,      // initially task complete nahi hoga
-      priority: priority // priority user ne jo select ki
+      text: inputValue,
+      done: false,
+      priority: priority,
     };
 
-    // purane tasks ke array me newTask add kiya
     setTasks((prev) => [...prev, newTask]);
-
-    // reset karna (input aur priority wapas default)
     setInputValue("");
     setPriority("Medium");
   };
 
-  // -----------------------------
-  // DELETE TASK FUNCTION
-  // -----------------------------
   const deleteTask = (index) => {
-    // filter karke jis index ko delete karna hai use hata diya
     setTasks((prev) => prev.filter((_, i) => i !== index));
   };
 
-  // -----------------------------
-  // TOGGLE DONE FUNCTION
-  // -----------------------------
   const toggleDone = (index) => {
-    // task ke 'done' property ko true/false switch karna
     setTasks((prev) =>
       prev.map((task, i) =>
         i === index ? { ...task, done: !task.done } : task
@@ -53,35 +32,25 @@ export const TodoApp = () => {
     );
   };
 
-  // -----------------------------
-  // STATS (total, completed, pending)
-  // -----------------------------
   const totalTasks = tasks.length;
   const completedTasks = tasks.filter((t) => t.done).length;
   const pendingTasks = totalTasks - completedTasks;
 
-  // -----------------------------
-  // UI RETURN (JSX)
-  // -----------------------------
   return (
     <div className="layout min-h-screen w-full bg-gradient-to-br from-gray-900 to-black flex items-center justify-center p-4">
       <div className="todo-app h-[40rem] w-[32rem] bg-white rounded-2xl shadow-2xl flex flex-col p-6">
         
-        {/* Header */}
         <h2 className="text-center text-2xl font-bold text-gray-800 mb-5">
           Professional Todo App
         </h2>
 
-        {/* Stats Section */}
         <div className="flex justify-around mb-5 text-sm font-semibold">
           <span className="text-blue-600">Total: {totalTasks}</span>
           <span className="text-green-600">Completed: {completedTasks}</span>
           <span className="text-red-600">Pending: {pendingTasks}</span>
         </div>
 
-        {/* Form Section */}
         <form className="flex gap-3 mb-5" onSubmit={handleFormSubmit}>
-          {/* Task Input */}
           <input
             type="text"
             className="border border-gray-400 rounded px-3 py-2 flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -90,7 +59,6 @@ export const TodoApp = () => {
             onChange={(e) => setInputValue(e.target.value)}
           />
 
-          {/* Priority Dropdown */}
           <select
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
@@ -101,7 +69,6 @@ export const TodoApp = () => {
             <option value="Low">🌱 Low</option>
           </select>
 
-          {/* Add Button */}
           <button
             type="submit"
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
@@ -110,7 +77,6 @@ export const TodoApp = () => {
           </button>
         </form>
 
-        {/* Task List Section */}
         <ul className="w-full flex-1 overflow-y-auto pr-2">
           {tasks.map((task, index) => (
             <li
@@ -119,9 +85,7 @@ export const TodoApp = () => {
                 task.done ? "bg-green-50" : "bg-gray-50"
               }`}
             >
-              {/* Left Side (Task Text + Priority) */}
               <div>
-                {/* Task Text */}
                 <span
                   className={`cursor-pointer block font-medium ${
                     task.done ? "line-through text-gray-500" : "text-gray-800"
@@ -131,7 +95,6 @@ export const TodoApp = () => {
                   {task.text}
                 </span>
 
-                {/* Priority Color */}
                 <span
                   className={`text-xs ${
                     task.priority === "High"
@@ -145,9 +108,7 @@ export const TodoApp = () => {
                 </span>
               </div>
 
-              {/* Right Side (Actions) */}
               <div className="flex gap-2">
-                {/* Mark / Done Button */}
                 <button
                   onClick={() => toggleDone(index)}
                   className={`px-3 py-1 text-xs rounded ${
@@ -159,7 +120,6 @@ export const TodoApp = () => {
                   {task.done ? "Done" : "Mark"}
                 </button>
 
-                {/* Delete Button */}
                 <button
                   onClick={() => deleteTask(index)}
                   className="px-3 py-1 text-xs rounded bg-red-500 text-white"
