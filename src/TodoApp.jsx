@@ -32,6 +32,10 @@ export const TodoApp = () => {
     );
   };
 
+  const clearAll = () => {
+    setTasks([]); // 🔥 saare tasks clear ho jayenge
+  };
+
   const totalTasks = tasks.length;
   const completedTasks = tasks.filter((t) => t.done).length;
   const pendingTasks = totalTasks - completedTasks;
@@ -130,6 +134,16 @@ export const TodoApp = () => {
             </li>
           ))}
         </ul>
+
+        {/* ✅ Clear All Button */}
+       
+          <button
+            onClick={clearAll}
+            className="mt-4 bg-red-600 hover:bg-red-700 text-white py-2 rounded"
+          >
+            Clear All
+          </button>
+     
       </div>
     </div>
   );
