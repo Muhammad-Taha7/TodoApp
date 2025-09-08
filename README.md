@@ -1,11 +1,11 @@
 ✅ Todo App
 
 A modern and professional Todo Application built with React.js and Tailwind CSS.
-This app helps you stay productive by allowing you to add, prioritize, and manage your daily tasks in an easy and visually appealing way.
+This app helps you stay organized and productive by letting you add, prioritize, and manage daily tasks with an elegant UI.
 
 🚀 Features
 
-✍️ Add New Tasks – Quickly add tasks with a clean form.
+✍️ Add New Tasks – Quickly add tasks with a clean and simple form.
 
 🏷️ Priority Levels – Assign High, Medium, or Low priority to tasks.
 
@@ -13,19 +13,19 @@ This app helps you stay productive by allowing you to add, prioritize, and manag
 
 🗑️ Delete Tasks – Remove tasks with a single click.
 
-📊 Task Summary – See how many tasks are completed and how many are still pending.
+📊 Task Summary – Track how many tasks are completed vs pending.
 
-📱 Responsive Design – Fully responsive UI for desktop and mobile.
+📱 Responsive Design – Optimized for both desktop and mobile.
 
 🎨 Modern UI – Styled with Tailwind CSS for a smooth and elegant experience.
 
 🛠️ Tech Stack
 
-React.js – For building UI and handling state with hooks
+⚛️ React.js – UI development & state management with hooks
 
-Tailwind CSS – For responsive and modern styling
+🎨 Tailwind CSS – Responsive, modern styling
 
-JavaScript (ES6+) – Core programming logic
+📜 JavaScript (ES6+) – Core logic and interactivity
 
 📂 Project Structure
 src/
@@ -53,20 +53,18 @@ Run the development server
 npm start
 
 
-Open your browser at http://localhost:3000 🎉
+Open your browser at http://localhost:3000
+ 🎉
 
 📸 Screenshots
-
-<img width="589" height="721" alt="image" src="https://github.com/user-attachments/assets/3fba6dfa-e47f-476d-a62c-d52b924f2725" />
-
-
+<img width="589" height="721" alt="Todo App Screenshot" src="https://github.com/user-attachments/assets/3fba6dfa-e47f-476d-a62c-d52b924f2725" />
 🎯 Future Improvements
 
 ⏰ Add task due dates with reminders
 
 📌 Drag-and-drop to reorder tasks
 
-☁️ Save tasks in local storage or a database
+☁️ Save tasks in local storage or connect with a database
 
 👤 Add user authentication for personal task management
 
