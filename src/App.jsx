@@ -1,9 +1,10 @@
-import { TodoApp } from "./TodoApp"
+import { TodoApp } from "./Components/todoapp"
+
 
 export const App =() =>
 {
   return(<>
-    <TodoApp />
+    <TodoApp/>
    
   </>)
 }
