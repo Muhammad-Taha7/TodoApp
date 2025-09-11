@@ -1,8 +1,10 @@
 # ✅ Todo App
 
 
-📸 Screenshots
+
 <img width="589" height="721" alt="Todo App Screenshot" src="https://github.com/user-attachments/assets/3fba6dfa-e47f-476d-a62c-d52b924f2725" />
+
+
 
 
 A modern and professional **Todo Application** built with **React.js** and **Tailwind CSS**.  
