@@ -1,5 +1,10 @@
 # ✅ Todo App
 
+
+📸 Screenshots
+<img width="589" height="721" alt="Todo App Screenshot" src="https://github.com/user-attachments/assets/3fba6dfa-e47f-476d-a62c-d52b924f2725" />
+
+
 A modern and professional **Todo Application** built with **React.js** and **Tailwind CSS**.  
 This app helps you stay organized and productive by letting you add, prioritize, and manage daily tasks with an elegant UI.
 
@@ -51,21 +56,34 @@ Copy code
 npm install
 Run the development server
 
+
+
 bash
 Copy code
 npm start
 Open your browser at 👉 http://localhost:3000
 
-📸 Screenshots
-<img width="589" height="721" alt="Todo App Screenshot" src="https://github.com/user-attachments/assets/3fba6dfa-e47f-476d-a62c-d52b924f2725" />
+
+
+
+
 🎯 Future Improvements
+
+
 ⏰ Add task due dates with reminders
 
+
 📌 Drag-and-drop to reorder tasks
+
+
+
 
 ☁️ Save tasks in local storage or connect with a database
 
 👤 Add user authentication for personal task management
+
+
+
 
 👨‍💻 Author
 Developed with ❤️ by Taha
